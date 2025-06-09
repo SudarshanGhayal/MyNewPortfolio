@@ -7,59 +7,59 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      demo: "https://example.com",
+      title: "The Salad Bar",
+      description: "A full-stack The Salad Bar solution with React, Features include Salad Menu,and admin dashboard.",
+      image: "https://the-salad-bar.vercel.app/images/SaladBardLogo.jpg",
+      tech: ["React"],
+      demo: "https://the-salad-bar.vercel.app/",
       github: "https://github.com",
       featured: true
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      demo: "https://example.com",
-      github: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with detailed forecasts, interactive maps, and location-based weather alerts using OpenWeather API.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tech: ["React", "OpenWeather API", "Chart.js"],
-      demo: "https://example.com",
-      github: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website with smooth animations, interactive elements, and optimized performance.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tech: ["React", "Tailwind CSS", "Framer Motion"],
-      demo: "https://example.com",
-      github: "https://github.com",
-      featured: true
-    },
-    {
-      title: "Social Media App",
-      description: "A social networking platform with real-time messaging, post sharing, and user profiles. Built with modern web technologies.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-      tech: ["React", "Socket.io", "Express", "MongoDB"],
-      demo: "https://example.com",
-      github: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Crypto Tracker",
-      description: "A cryptocurrency tracking application with real-time price updates, portfolio management, and detailed market analysis.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-      tech: ["React", "CoinGecko API", "Redux"],
-      demo: "https://example.com",
-      github: "https://github.com",
-      featured: false
     }
+    // {
+    //   title: "Task Management App",
+    //   description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
+    //   image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+    //   tech: ["React", "Firebase", "Tailwind CSS"],
+    //   demo: "https://example.com",
+    //   github: "https://github.com",
+    //   featured: false
+    // },
+    // {
+    //   title: "Weather Dashboard",
+    //   description: "A beautiful weather application with detailed forecasts, interactive maps, and location-based weather alerts using OpenWeather API.",
+    //   image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
+    //   tech: ["React", "OpenWeather API", "Chart.js"],
+    //   demo: "https://example.com",
+    //   github: "https://github.com",
+    //   featured: false
+    // },
+    // {
+    //   title: "Portfolio Website",
+    //   description: "A modern, responsive portfolio website with smooth animations, interactive elements, and optimized performance.",
+    //   image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+    //   tech: ["React", "Tailwind CSS", "Framer Motion"],
+    //   demo: "https://example.com",
+    //   github: "https://github.com",
+    //   featured: true
+    // },
+    // {
+    //   title: "Social Media App",
+    //   description: "A social networking platform with real-time messaging, post sharing, and user profiles. Built with modern web technologies.",
+    //   image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+    //   tech: ["React", "Socket.io", "Express", "MongoDB"],
+    //   demo: "https://example.com",
+    //   github: "https://github.com",
+    //   featured: false
+    // },
+    // {
+    //   title: "Crypto Tracker",
+    //   description: "A cryptocurrency tracking application with real-time price updates, portfolio management, and detailed market analysis.",
+    //   image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
+    //   tech: ["React", "CoinGecko API", "Redux"],
+    //   demo: "https://example.com",
+    //   github: "https://github.com",
+    //   featured: false
+    // }
   ];
 
   return (
@@ -140,7 +140,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <Button 
             size="lg" 
             variant="outline" 
@@ -148,7 +148,7 @@ const Projects = () => {
           >
             View All Projects
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

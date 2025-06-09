@@ -1,16 +1,72 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted');
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+      setIsSubmitting(false);
+    }, 1000);
+    emailjs.send(
+      'service_7rkvnps', // your actual service ID
+      'template_q0cs495', // your actual template ID
+      {
+        from_firstname: formData.firstname,
+        from_lastname: formData.lastname,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'HSOhx3kh1W74bNNTN' // your EmailJS public key
+    ).then(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ firstname: '', lastname: '', email: '', subject: '', message: '' });
+      setIsSubmitting(false);
+    }).catch((error) => {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+      });
+      console.error("Email send error:", error);
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -43,7 +99,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="animate-slide-in-left">
             <h3 className="text-3xl font-bold text-white mb-8">Let's Start a Conversation</h3>
-            
+
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
                 <div className="p-3 glass-card rounded-full">
@@ -51,20 +107,20 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Email</h4>
-                  <p className="text-white/80">sudarshan.ghayal@example.com</p>
+                  <p className="text-white/80">ghayalsudarshan5050@gmail.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="p-3 glass-card rounded-full">
                   <Phone size={24} className="text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Phone</h4>
-                  <p className="text-white/80">+91 XXX XXX XXXX</p>
+                  <p className="text-white/80">+91 9858165050</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="p-3 glass-card rounded-full">
                   <MapPin size={24} className="text-white" />
@@ -105,46 +161,73 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-white/80 mb-2 font-medium">First Name</label>
-                    <Input 
+                    <Input
                       className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                      name="firstname"
+                      type="text"
+                      required
+                      value={formData.firstname}
+                      onChange={handleInputChange}
                       placeholder="John"
                     />
                   </div>
                   <div>
                     <label className="block text-white/80 mb-2 font-medium">Last Name</label>
-                    <Input 
+                    <Input
                       className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                      name="lastname"
+                      type="text"
+                      required
+                      value={formData.lastname}
+                      onChange={handleInputChange}
                       placeholder="Doe"
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-white/80 mb-2 font-medium">Email</label>
-                  <Input 
+                  <Input
+                    id="email"
+                    name="email"
                     type="email"
+                    required
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="john@example.com"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-white/80 mb-2 font-medium">Subject</label>
-                  <Input 
+                  <Input
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    required
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     placeholder="Full Stack Development Project"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-white/80 mb-2 font-medium">Message</label>
-                  <Textarea 
+                  <Textarea
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[120px]"
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder="Tell me about your .NET Core or React project..."
                   />
                 </div>
-                
-                <Button 
+
+                <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-white text-cosmic-dark hover:bg-white/90 hover:scale-105 transition-all duration-300"

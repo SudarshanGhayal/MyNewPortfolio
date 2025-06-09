@@ -22,7 +22,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-cosmic-dark text-center py-8">
         <p className="text-white/60">
-          © 2024 Harsh. Made with ❤️ and lots of ☕
+          © 2025 Sudarshan. Made with ❤️ and lots of ☕
         </p>
       </footer>
     </div>

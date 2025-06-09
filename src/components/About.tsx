@@ -109,15 +109,15 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-white/80">Projects Delivered</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">15+</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">1</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/80">Technologies Mastered</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">10+</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">5</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/80">Years of Coding</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">3+</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">3</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-white/80">Lines of Code</span>
