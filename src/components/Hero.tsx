@@ -32,14 +32,14 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white animate-glow">
             Hi, I'm{' '}
             <span className="cosmic-gradient-text">
-              Harsh
+              Sudarshan
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Full Stack Developer & UI/UX Designer passionate about creating 
-            <span className="cosmic-gradient-text font-semibold"> beautiful</span> and 
-            <span className="cosmic-gradient-text font-semibold"> functional</span> digital experiences
+            Full Stack Developer passionate about building 
+            <span className="cosmic-gradient-text font-semibold"> scalable</span> and 
+            <span className="cosmic-gradient-text font-semibold"> robust</span> web applications with .NET Core and React
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -62,7 +62,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6 mb-12">
             <a 
-              href="https://github.com" 
+              href="https://github.com/sudarshan-ghayal" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 text-white hover:text-cosmic-cyan"
@@ -70,7 +70,7 @@ const Hero = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/sudarshan-ghayal" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 text-white hover:text-cosmic-blue"
@@ -78,7 +78,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="mailto:harsh@example.com"
+              href="mailto:sudarshan.ghayal@example.com"
               className="p-3 glass-card rounded-full hover:scale-110 transition-all duration-300 text-white hover:text-cosmic-pink"
             >
               <Mail size={24} />

@@ -36,7 +36,7 @@ const Contact = () => {
             Get In <span className="text-black">Touch</span>
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Have a project in mind? Let's work together to create something amazing!
+            Have a project in mind? Let's work together to build something amazing with .NET Core and React!
           </p>
         </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Email</h4>
-                  <p className="text-white/80">harsh@example.com</p>
+                  <p className="text-white/80">sudarshan.ghayal@example.com</p>
                 </div>
               </div>
               
@@ -61,7 +61,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Phone</h4>
-                  <p className="text-white/80">+1 (555) 123-4567</p>
+                  <p className="text-white/80">+91 XXX XXX XXXX</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-white/80">New York, NY</p>
+                  <p className="text-white/80">India</p>
                 </div>
               </div>
             </div>
@@ -81,19 +81,19 @@ const Contact = () => {
               <ul className="space-y-3 text-white/80">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-cosmic-cyan rounded-full mr-3"></span>
-                  Fast & Reliable Development
+                  Full Stack .NET Core Expertise
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-cosmic-pink rounded-full mr-3"></span>
-                  Modern & Responsive Design
+                  Modern React TypeScript Solutions
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-cosmic-orange rounded-full mr-3"></span>
-                  SEO Optimized Solutions
+                  Database Design & Optimization
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-cosmic-purple rounded-full mr-3"></span>
-                  24/7 Support & Maintenance
+                  DevOps & Deployment Ready
                 </li>
               </ul>
             </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                   <label className="block text-white/80 mb-2 font-medium">Subject</label>
                   <Input 
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50"
-                    placeholder="Project Discussion"
+                    placeholder="Full Stack Development Project"
                   />
                 </div>
                 
@@ -140,7 +140,7 @@ const Contact = () => {
                   <label className="block text-white/80 mb-2 font-medium">Message</label>
                   <Textarea 
                     className="bg-white/10 border-white/30 text-white placeholder:text-white/50 min-h-[120px]"
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your .NET Core or React project..."
                   />
                 </div>
                 

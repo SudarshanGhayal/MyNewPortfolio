@@ -1,34 +1,38 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Code, Palette, Smartphone, Globe } from 'lucide-react';
+import { Code, Database, Globe, Settings } from 'lucide-react';
 
 const About = () => {
   const skills = [
     {
       icon: Code,
-      title: "Frontend Development",
-      description: "React, Next.js, TypeScript, Tailwind CSS",
+      title: "Backend Development",
+      description: ".NET Core, Web API, C#",
       color: "cosmic-purple"
     },
     {
-      icon: Globe,
-      title: "Backend Development", 
-      description: "Node.js, Express, MongoDB, PostgreSQL",
+      icon: Database,
+      title: "Database Management", 
+      description: "SQL Server, Oracle",
       color: "cosmic-blue"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Figma, Adobe XD, User Research",
+      icon: Globe,
+      title: "Frontend Development",
+      description: "React, TypeScript, Modern UI",
       color: "cosmic-pink"
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "React Native, Flutter, iOS/Android",
+      icon: Settings,
+      title: "DevOps & Tools",
+      description: "Git, Azure DevOps, Deployment",
       color: "cosmic-cyan"
     }
+  ];
+
+  const tools = [
+    "Visual Studio", "VS Code", "Git", "Grafana", "Azure DevOps"
   ];
 
   return (
@@ -45,9 +49,8 @@ const About = () => {
             About <span className="cosmic-gradient-text">Me</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate developer with 3+ years of experience creating digital solutions 
-            that combine beautiful design with powerful functionality. I love turning ideas 
-            into reality through clean, efficient code.
+            I'm Sudarshan Dilip Ghayal, a passionate Full Stack Developer with expertise in 
+            building enterprise-level applications using .NET Core ecosystem and modern frontend technologies.
           </p>
         </div>
 
@@ -71,38 +74,54 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
-            <h3 className="text-3xl font-bold text-white mb-6">My Journey</h3>
-            <p className="text-white/80 mb-6 leading-relaxed">
-              Started my coding journey in 2021 with a passion for creating beautiful web experiences. 
-              Since then, I've worked on numerous projects ranging from small business websites to 
-              complex web applications.
-            </p>
+            <h3 className="text-3xl font-bold text-white mb-6">My Technical Stack</h3>
+            <div className="space-y-4 mb-6">
+              <div>
+                <h4 className="text-xl font-semibold text-cosmic-cyan mb-2">Core Technologies</h4>
+                <p className="text-white/80 leading-relaxed">
+                  .NET Core, SQL Server, Oracle, Web API, React TypeScript, Git
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-cosmic-pink mb-2">Development Tools</h4>
+                <div className="flex flex-wrap gap-2">
+                  {tools.map((tool) => (
+                    <span 
+                      key={tool}
+                      className="px-3 py-1 bg-cosmic-purple/20 text-cosmic-purple text-sm rounded-full border border-cosmic-purple/30"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
             <p className="text-white/80 leading-relaxed">
-              I believe in continuous learning and staying updated with the latest technologies. 
-              My goal is to create digital experiences that not only look great but also provide 
-              exceptional user experiences.
+              I specialize in creating robust backend solutions with .NET Core and engaging 
+              frontend experiences with React TypeScript, ensuring seamless integration and 
+              optimal performance across the full stack.
             </p>
           </div>
 
           <div className="animate-slide-in-right">
             <div className="glass-card p-8 rounded-2xl">
-              <h4 className="text-2xl font-bold text-white mb-6">Quick Stats</h4>
+              <h4 className="text-2xl font-bold text-white mb-6">Professional Stats</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-white/80">Projects Completed</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">25+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-white/80">Years Experience</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">3+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-white/80">Happy Clients</span>
+                  <span className="text-white/80">Projects Delivered</span>
                   <span className="text-2xl font-bold cosmic-gradient-text">15+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-white/80">Coffee Cups</span>
-                  <span className="text-2xl font-bold cosmic-gradient-text">∞</span>
+                  <span className="text-white/80">Technologies Mastered</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">10+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80">Years of Coding</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">3+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80">Lines of Code</span>
+                  <span className="text-2xl font-bold cosmic-gradient-text">100K+</span>
                 </div>
               </div>
             </div>
