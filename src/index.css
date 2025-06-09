@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,47 +38,41 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Cosmic theme colors */
+    --cosmic-purple: 271 91% 65%;
+    --cosmic-blue: 221 83% 53%;
+    --cosmic-pink: 316 70% 68%;
+    --cosmic-cyan: 189 94% 43%;
+    --cosmic-orange: 25 95% 53%;
+    --cosmic-dark: 222 47% 11%;
+    --cosmic-light: 210 40% 98%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -100,4 +95,79 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom animations and effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px hsl(var(--cosmic-purple)), 0 0 30px hsl(var(--cosmic-blue)), 0 0 40px hsl(var(--cosmic-pink));
+  }
+  50% {
+    text-shadow: 0 0 10px hsl(var(--cosmic-purple)), 0 0 20px hsl(var(--cosmic-blue)), 0 0 30px hsl(var(--cosmic-pink));
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.cosmic-gradient {
+  background: linear-gradient(135deg, hsl(var(--cosmic-purple)) 0%, hsl(var(--cosmic-blue)) 25%, hsl(var(--cosmic-pink)) 50%, hsl(var(--cosmic-cyan)) 75%, hsl(var(--cosmic-orange)) 100%);
+}
+
+.cosmic-gradient-text {
+  background: linear-gradient(135deg, hsl(var(--cosmic-purple)) 0%, hsl(var(--cosmic-blue)) 25%, hsl(var(--cosmic-pink)) 50%, hsl(var(--cosmic-cyan)) 75%, hsl(var(--cosmic-orange)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-12 {
+  transform: rotateY(12deg);
+}
+
+.hover-rotate-y-0:hover {
+  transform: rotateY(0deg);
 }

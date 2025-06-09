@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <section id="hero">
+          <Hero />
+        </section>
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+      
+      {/* Footer */}
+      <footer className="bg-cosmic-dark text-center py-8">
+        <p className="text-white/60">
+          © 2024 Harsh. Made with ❤️ and lots of ☕
+        </p>
+      </footer>
     </div>
   );
 };
