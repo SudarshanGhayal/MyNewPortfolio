@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white animate-glow">
             Hi, I'm{' '}
-            <span className="cosmic-gradient-text">
+            <span className="text-yellow-400 drop-shadow-lg font-extrabold animate-pulse">
               Sudarshan
             </span>
           </h1>
