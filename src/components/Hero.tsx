@@ -38,8 +38,8 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Full Stack Developer passionate about building 
-            <span className="cosmic-gradient-text font-semibold"> scalable</span> and 
-            <span className="cosmic-gradient-text font-semibold"> robust</span> web applications with .NET Core and React
+            <span className="text-yellow-400 drop-shadow-lg font-extrabold animate-pulse"> scalable</span> and 
+            <span className="text-yellow-400 drop-shadow-lg font-extrabold animate-pulse"> robust</span> web applications with .NET Core and React
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
