@@ -10,38 +10,38 @@ const Projects = () => {
       title: "The Salad Bar",
       description: "A full-stack The Salad Bar solution with React, Features include Salad Menu,and admin dashboard.",
       image: "https://the-salad-bar.vercel.app/images/SaladBardLogo.jpg",
-      tech: ["React"],
+      tech: ["React ts"],
       demo: "https://the-salad-bar.vercel.app/",
       github: "https://github.com",
       featured: true
-    }
-    // {
-    //   title: "Task Management App",
-    //   description: "A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
-    //   image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    //   tech: ["React", "Firebase", "Tailwind CSS"],
-    //   demo: "https://example.com",
-    //   github: "https://github.com",
-    //   featured: false
-    // },
-    // {
-    //   title: "Weather Dashboard",
-    //   description: "A beautiful weather application with detailed forecasts, interactive maps, and location-based weather alerts using OpenWeather API.",
-    //   image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-    //   tech: ["React", "OpenWeather API", "Chart.js"],
-    //   demo: "https://example.com",
-    //   github: "https://github.com",
-    //   featured: false
-    // },
-    // {
-    //   title: "Portfolio Website",
-    //   description: "A modern, responsive portfolio website with smooth animations, interactive elements, and optimized performance.",
-    //   image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    //   tech: ["React", "Tailwind CSS", "Framer Motion"],
-    //   demo: "https://example.com",
-    //   github: "https://github.com",
-    //   featured: true
-    // },
+    },
+    {
+      title: "Full Stack .NET Interview Prep",
+      description: "Complete interview preparation with 500+ questions covering C#,ASP.NET Core,SQL Server,JavaScript,React,CI/CD",
+      image: "https://images.unsplash.com/photo-1584907797015-7554cd315667?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fEludGVydmlldyUyMFByZXBhcmF0aW9uJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D",
+      tech: ["React ts"],
+      demo: "https://net-developer-interview-prep-master.vercel.app/",
+      github: "https://github.com",
+      featured: false
+    },
+    {
+      title: "Resume Builder",
+      description: "A modern Resume Builder website that generates ATS-friendly resumes designed to pass screening systems and land more interviews.",
+      image: "https://images.unsplash.com/photo-1609017375134-95cb44950ad2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fFJlc3VtZSUyMFdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
+      tech: ["React ts"],
+      demo: "https://resume-builder-4-sage.vercel.app/",
+      github: "https://github.com",
+      featured: false
+    },
+    {
+      title: "Basic Calculator + Interest Calculator",
+      description: "This website offers multiple financial and math calculators including Simple Interest, Compound Interest, Reducing Balance, Fixed Deposit, and a Basic Calculator. It provides quick, accurate results to help users make better financial decisions.",
+      image: "https://media.istockphoto.com/id/1354361244/photo/calculator-and-magnifier-on-blue-background-top-view-copy-space.jpg?s=1024x1024&w=is&k=20&c=Zjq470dUjZ2sydb_xdC1pMo2ndj_Kh7o807hvPNnJh8=",
+      tech: ["React", "Tailwind CSS"],
+      demo: "https://basic-calculator-interest-calculato.vercel.app/",
+      github: "https://github.com",
+      featured: true
+    },
     // {
     //   title: "Social Media App",
     //   description: "A social networking platform with real-time messaging, post sharing, and user profiles. Built with modern web technologies.",
